@@ -1,4 +1,6 @@
-from rest_framework import serializers, viewsets
+from rest_framework import serializers
+from rest_framework.validators import UniqueTogetherValidator
+
 from .models import Booking, Hotel
 
 class HotelSerializer(serializers.ModelSerializer):
@@ -13,7 +15,9 @@ class BookingSerializer(serializers.ModelSerializer):
         ordering = ('id',)
         fields = ('id', 'title', 'date_time', 'rating', 'origin')
 
-    def validate(self, data):
-        if data['title'] == data['title']:
-            raise serializers.ValidationError("Duplicated title, please change with another")
-        return data
+        validators = [
+            UniqueTogetherValidator(
+                queryset=Booking.objects.all(),
+                fields=['title']
+            )
+        ]
