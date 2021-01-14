@@ -23,6 +23,21 @@ Testing:
 
 To test functionality goto https://django-app-booking.herokuapp.com/api/hotels
 
+#Usage/methods:
+    /api/hotels/{id} -> int
+    - return str id as pk (primary key)
+    /api/hotels/{title} -> str
+    - return str title
+    /api/hotels/{origin} -> str
+    - return str with coordinates from Google API
+    /api/hotels/{date_time} -> str
+    - return datetime in unicode
+    /api/hotels/{rating} -> float
+    - return float value
+    /api/hotels/{is_published} -> boolean
+    - return boolean value
+    
+
 1. This endpoint using 4 methods GET/POST/PUT/DELETE
 2. You can add your origin and hotel by desire (preferable to do it in django admin panel)
 3. POST/PUT Method to add/update post id data
@@ -33,3 +48,13 @@ To Check booking list go by  https://django-app-booking.herokuapp.com/api/bookin
 
 1. This endpoint using 1 method - GET
 2. Extracting all bookings via GET method
+
+#Usage/methods:
+    /api/bookig/{id} -> int
+    - return str id as pk (primary key)
+    /api/hotels/{title} -> str
+    - return str title
+    /api/hotels/{description} -> str
+    - return str description
+    /api/hotels/{booking} -> mixed
+    - return values from foreign key hotels
