@@ -9,7 +9,7 @@ class PatchedPlaceField(PlacesField):
 
 
 class Booking(models.Model):
-    title = models.CharField(max_length=255)
+    title = models.CharField(max_length=255, null=True, blank=True)
     origin = PatchedPlaceField(max_length=25, blank=True)
     date_time = models.DateTimeField(auto_now_add=True)
     rating = models.FloatField(default=0.0, help_text="Enter hotel rating", blank=True)
