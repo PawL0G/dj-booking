@@ -1,7 +1,7 @@
 from django.urls import reverse, resolve
 from rest_framework import status
 from rest_framework.test import APITestCase
-from .models import Booking
+from ..models import Booking
 
 
 class TestEndpoints:

@@ -1,19 +1,22 @@
 from rest_framework import viewsets
-from .models import Booking
-from .serializer import BookingSerializer
+
+from .models import Booking, Hotel
+from .serializer import BookingSerializer, HotelSerializer
 
 
-
-
-class ArticleView(viewsets.ModelViewSet):
+class HotelView(viewsets.ModelViewSet):
     serializer_class = BookingSerializer
     queryset = Booking.objects.all()
 
 
+class BookingViewSet(viewsets.ReadOnlyModelViewSet):
+    serializer_class = HotelSerializer
+    queryset = Hotel.objects.all()
 
-# class ArticleView(ListCreateAPIView):
+# class SingleHotelView(ListCreateAPIView):
 #     queryset = Booking.objects.all()
 #     serializer_class = BookingSerializer
+#
 #
 #     def perform_create(self, serializer):
 #         queryset = get_object_or_404(Hotel, id=self.request.data.get('id'))
@@ -24,9 +27,3 @@ class ArticleView(viewsets.ModelViewSet):
 #
 #     def post(self, request, *args, **kwargs):
 #         return self.create(request, *args, **kwargs)
-#
-#
-#
-# class SingleArticleView(RetrieveUpdateDestroyAPIView):
-#     queryset = Booking.objects.all()
-#     serializer_class = BookingSerializer

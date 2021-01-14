@@ -20,6 +20,7 @@ class Booking(models.Model):
 
     class Meta:
         ordering = ('-date_time',)
+        verbose_name = 'Hotel'
 
 
 class Hotel(models.Model):
@@ -33,6 +34,7 @@ class Hotel(models.Model):
 
     class Meta:
         ordering = ('-pub_date',)
+        verbose_name = 'Booking'
 
     def __str__(self):
         return self.__class__.__name__

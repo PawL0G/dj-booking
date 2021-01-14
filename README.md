@@ -17,8 +17,17 @@ API was built with Django Rest Framework
 
 Testing:
 
+![plot](./api.png)
+
 To test functionality goto 127.0.0.1/api/hotels
 
-1. There is 4 methods GET/POST/PUT/DELETE
+1. This endpoint using 4 methods GET/POST/PUT/DELETE
 2. You can add your origin and hotel by desire (preferable to do it in django admin panel)
-3. Check booking list go by  127.0.0.1/api/booking
+3. POST/PUT Method to add/update post id data
+
+![plot](./api2.png)
+
+To Check booking list go by  127.0.0.1/api/booking
+
+1. This endpoint using 1 method - GET
+2. Extracting all bookings via GET method
