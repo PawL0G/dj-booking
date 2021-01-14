@@ -32,7 +32,7 @@ SECRET_KEY = 'xnk7dok&hp2&iprl-7ga_oudtnfg5t3!ky)8f0!)b9#ctbp69&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['django-app-booking.herokuapp.com']
 
 # Application definition
 
