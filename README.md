@@ -11,7 +11,7 @@ First Launch:
 
 API was built with Django Rest Framework
 
-Note: to test map API you need to switch page to admin https://django-app-booking.herokuapp.com/admin
+Note: to test map API you need to switch page to admin https://django-app-booking.herokuapp.com/admin (note: the same pass as endpoint url)
 
 1. Data based on ORM
 2. Used Google Maps API as place determination by origin
