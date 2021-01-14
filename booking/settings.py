@@ -119,7 +119,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 PLACES_MAPS_API_KEY = 'AIzaSyBQL5NtkOVhW9AxuSIJUM64YAqVnMZ1uos'
 PLACES_MAP_WIDGET_HEIGHT = 480
