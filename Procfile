@@ -1,1 +1,1 @@
-gunicorn <all the options here> wsgi:app
+web: gunicorn booking.wsgi
