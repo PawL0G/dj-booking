@@ -22,8 +22,13 @@ class Booking(models.Model):
         ordering = ('-date_time',)
         verbose_name = 'Hotel'
 
+    def save(self, *args, **kwargs):
+        self.title = self.title
+        super(Booking, self).save()
+
 
 class Hotel(models.Model):
+    title = models.CharField(max_length=255, default='')
     description = models.TextField(max_length=999)
     pub_date = models.DateTimeField('Choose your date to book', null=True)
     booking = models.ForeignKey('Booking', related_name='booking', verbose_name='hotel location', on_delete=models.CASCADE)
@@ -36,5 +41,9 @@ class Hotel(models.Model):
         ordering = ('-pub_date',)
         verbose_name = 'Booking'
 
+    def save(self, *args, **kwargs):
+        self.title = self.title
+        super(Hotel, self).save()
+
     def __str__(self):
-        return self.__class__.__name__
+        return self.title
