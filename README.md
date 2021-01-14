@@ -58,11 +58,14 @@ To Check booking list go by  https://django-app-booking.herokuapp.com/api/bookin
 
 Usage/methods: 
 
-/api/bookig/{id} -> int 
+/api/bookig/{id} -> int
 - return str id as pk (primary key)
+
 /api/hotels/{title} -> str
 - return str title 
+
 /api/hotels/{description} -> str
 - return str description 
-/api/hotels/{booking} -> mixed 
+
+/api/hotels/{booking} -> mixed
 - return values from foreign key hotels
