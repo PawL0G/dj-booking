@@ -25,12 +25,24 @@ To test functionality goto https://django-app-booking.herokuapp.com/api/hotels
 
 Usage/methods: 
 
-/api/hotels/{id} -> int - return str id as pk (primary key) 
-/api/hotels/{title} -> str - return str title 
-/api/hotels/{origin} -> str - return str with coordinates from Google API 
-/api/hotels/{date_time} -> str - return datetime in unicode 
-/api/hotels/{rating} -> float - return float value 
-/api/hotels/{is_published} -> boolean - return boolean value
+* /api/hotels/{id} -> int 
+- return str id as pk (primary key)
+
+/api/hotels/{title} -> str 
+- return str title
+
+/api/hotels/{origin} -> str 
+- return str with coordinates from Google API
+
+/api/hotels/{date_time} -> str 
+- return datetime in unicode
+
+/api/hotels/{rating} -> float 
+- return float value
+
+/api/hotels/{is_published} -> boolean 
+- return boolean value
+
     
 
 1. This endpoint using 4 methods GET/POST/PUT/DELETE
@@ -46,7 +58,11 @@ To Check booking list go by  https://django-app-booking.herokuapp.com/api/bookin
 
 Usage/methods: 
 
-/api/bookig/{id} -> int - return str id as pk (primary key) 
-/api/hotels/{title} -> str - return str title 
-/api/hotels/{description} -> str - return str description 
-/api/hotels/{booking} -> mixed - return values from foreign key hotels
+/api/bookig/{id} -> int 
+- return str id as pk (primary key)
+/api/hotels/{title} -> str
+- return str title 
+/api/hotels/{description} -> str
+- return str description 
+/api/hotels/{booking} -> mixed 
+- return values from foreign key hotels
