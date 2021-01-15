@@ -9,7 +9,7 @@ class BookingViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Hotel.objects.all()
 
     def perform_create(self, serializer):
-        serializer.save(serializer_class=self.request.title)
+        serializer.save()
 
 
 class HotelView(viewsets.ModelViewSet):
@@ -17,7 +17,7 @@ class HotelView(viewsets.ModelViewSet):
     queryset = Booking.objects.all()
 
     def perform_create(self, serializer):
-        serializer.save(serializer_class=self.request.title)
+        serializer.save()
 
 
 # class SingleHotelView(ListCreateAPIView):

@@ -1,7 +1,6 @@
 from django.db import models
 from places.fields import PlacesField
 
-
 class PatchedPlaceField(PlacesField):
     def value_to_string(self, obj):
         value = self.value_from_object(obj)
